@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ISpaceX } from 'src/app/models/spacex.moel';
 import { FetchDetailsService } from 'src/app/services/fetch-details.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { FetchDetailsService } from 'src/app/services/fetch-details.service';
 })
 export class LaunchProgramsComponent implements OnInit {
 
-  @Input() spaceXData = []
+  @Input() spaceXData:ISpaceX[] = []
   constructor() { }
 
   ngOnInit(): void {}

@@ -1,6 +1,7 @@
 import { HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ISpaceX } from 'src/app/models/spacex.moel';
 import { FetchDetailsService } from 'src/app/services/fetch-details.service';
 
 @Component({
@@ -9,7 +10,7 @@ import { FetchDetailsService } from 'src/app/services/fetch-details.service';
   styleUrls: ['./launch-home.component.scss']
 })
 export class LaunchHomeComponent implements OnInit {
-  spaceXData = []
+  spaceXData:ISpaceX[] = []
   params = new HttpParams();
   selectedFilter: string | null = ''
   isLaunchSuccessful: boolean | undefined = undefined

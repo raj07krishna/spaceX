@@ -4,11 +4,11 @@
     <div *ngFor="let spaceX of spaceXData; let i=index" class="mat-elevation-z2 rounded p-4 card-width bg-white">
         <img class="image-size mb-4" mat-card-image [src]="spaceX?.links?.mission_patch_small"
             [alt]="spaceX?.mission_name">
-        <mat-label class="font-bold header-color">{{spaceX.mission_name}} #{{i+1}}</mat-label>
+        <mat-label class="font-bold header-color">{{spaceX?.mission_name}} #{{i+1}}</mat-label>
         <br>
         <div class="flex flex-col">
             <div class="flex flex-col mb-2">
-                <mat-label *ngIf="spaceX?.mission_id.length" class="font-semibold">Mission Ids:
+                <mat-label *ngIf="spaceX?.mission_id && spaceX?.mission_id?.length" class="font-semibold">Mission Ids:
                 </mat-label>
                 <ul class="list-disc">
                     <li class="ml-6" *ngFor="let id of spaceX?.mission_id">
@@ -19,18 +19,18 @@
             <div class="flex flex-row mb-2">
                 <mat-label class="font-semibold w-1/2"> Launch Year:
                 </mat-label>
-                <mat-label class="pl-2 w-1/2"> {{spaceX.launch_year}} </mat-label>
+                <mat-label class="pl-2 w-1/2"> {{spaceX?.launch_year}} </mat-label>
 
             </div>
             <div class="flex flex-row mb-2">
                 <mat-label class="font-semibold w-1/2">Successful Launch:
                 </mat-label>
-                <mat-label class="pl-2 w-1/2">{{spaceX.launch_success}}</mat-label>
+                <mat-label class="pl-2 w-1/2">{{spaceX?.launch_success}}</mat-label>
             </div>
             <div class="flex flex-row mb-2">
                 <mat-label class="font-semibold w-1/2">Successful Landing:
                 </mat-label>
-                <mat-label class="pl-2 w-1/2">{{spaceX.rocket?.first_stage?.cores[0]?.land_success }}</mat-label>
+                <mat-label class="pl-2 w-1/2">{{spaceX!.rocket!.first_stage!.cores[0]!.land_success }}</mat-label>
             </div>
         </div>
     </div>

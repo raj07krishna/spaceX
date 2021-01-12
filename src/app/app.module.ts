@@ -23,7 +23,7 @@ import {MatCardModule} from '@angular/material/card';
     LaunchHomeComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,

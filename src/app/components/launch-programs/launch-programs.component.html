@@ -1,7 +1,7 @@
-<div *ngIf="spaceXData.length"
+<div id="content" *ngIf="spaceXData.length"
     class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-10 justify-items-center">
 
-    <div *ngFor="let spaceX of spaceXData; let i=index" class="mat-elevation-z2 rounded p-4 card-width bg-white">
+    <div tabindex=0 *ngFor="let spaceX of spaceXData; let i=index" class="mat-elevation-z2 rounded p-4 card-width bg-white">
         <img class="image-size mb-4" mat-card-image [src]="spaceX?.links?.mission_patch_small"
             [alt]="spaceX?.mission_name">
         <mat-label class="font-bold header-color">{{spaceX?.mission_name}} #{{i+1}}</mat-label>

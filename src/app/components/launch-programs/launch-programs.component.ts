@@ -10,6 +10,7 @@ import { FetchDetailsService } from 'src/app/services/fetch-details.service';
 export class LaunchProgramsComponent implements OnInit {
 
   @Input() spaceXData:ISpaceX[] = []
+  
   constructor() { }
 
   ngOnInit(): void {}

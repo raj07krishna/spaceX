@@ -64,8 +64,6 @@ export class LaunchHomeComponent implements OnInit {
       this.isLaunchSuccessful = Boolean(this.route.snapshot.queryParamMap.get('launch_success'))
       this.params = this.params.append('launch_success', `${this.isLaunchSuccessful}`);
     }
-    console.log(this.params);
-    console.log(this.selectedFilter,this.isLandingSuccessful,this.isLaunchSuccessful);
     
     this.fetchDetails.firstTimeFetchData(this.params).subscribe(data => {
       this.spaceXData = data

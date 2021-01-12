@@ -25,12 +25,12 @@
             <div class="flex flex-row mb-2">
                 <mat-label class="font-semibold w-1/2">Successful Launch:
                 </mat-label>
-                <mat-label class="pl-2 w-1/2">{{spaceX?.launch_success}}</mat-label>
+                <mat-label class="pl-2 w-1/2">{{!spaceX?.launch_success ? 'false' : spaceX?.launch_success}}</mat-label>
             </div>
             <div class="flex flex-row mb-2">
                 <mat-label class="font-semibold w-1/2">Successful Landing:
                 </mat-label>
-                <mat-label class="pl-2 w-1/2">{{spaceX!.rocket!.first_stage!.cores[0]!.land_success }}</mat-label>
+                <mat-label class="pl-2 w-1/2">{{!spaceX!.rocket!.first_stage!.cores[0]!.land_success ? 'false': spaceX!.rocket!.first_stage!.cores[0]!.land_success }}</mat-label>
             </div>
         </div>
     </div>

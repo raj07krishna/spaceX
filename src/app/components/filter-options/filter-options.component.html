@@ -1,0 +1,44 @@
+<div class="bg-white p-4 rounded mb-4">
+    <h2 class="font-semibold text-xl">Filters</h2>
+    <div class="flex items-center flex-col">
+        <mat-label>Launch Year</mat-label>
+        <mat-divider class="w-7/12"></mat-divider>
+    </div>
+    <div *ngFor="let filter of filters; let i=index ; let even = even;" class="flex flex-col">
+        <div *ngIf="even" class="grid grid-cols-2 gap-6 justify-items-center my-2">
+            <button class="btn-size" (click)="changeValue(i)"
+                [ngClass]="[filters[i]===selectedFilter?'filter-selected':'filter-not-selected']" *ngIf="filters[i]"
+                mat-raised-button>{{filters[i]}}</button>
+            <button class="btn-size" (click)="changeValue(i+1)" [ngClass]="
+            [filters[i+1]===selectedFilter?'filter-selected':'filter-not-selected']" *ngIf="filters[i+1]"
+                mat-raised-button>{{filters[i+1]}}</button>
+
+        </div>
+    </div>
+    <div class="flex items-center flex-col mb-2">
+        <mat-label>Successful Launch</mat-label>
+        <mat-divider class="w-7/12"></mat-divider>
+    </div>
+    <div class="grid grid-cols-2 gap-6 justify-items-center">
+        <button [ngClass]="[isLaunchSuccessful?'filter-selected':'filter-not-selected']"
+            (click)="isLaunchSuccessful = true; updateValue()" mat-raised-button class="btn-size">True</button>
+        <button
+            [ngClass]="[isLaunchSuccessful?'filter-not-selected': isLaunchSuccessful === undefined ? 'filter-not-selected':'filter-selected']"
+            (click)="isLaunchSuccessful = false; updateValue()" mat-raised-button class="btn-size">False</button>
+    </div>
+    <br>
+    <div class="flex items-center flex-col mb-2">
+        <mat-label>Successful Landing</mat-label>
+        <mat-divider class="w-7/12"></mat-divider>
+    </div>
+    <div class="grid grid-cols-2 gap-6 justify-items-center">
+        
+        <button [ngClass]="[isLandingSuccessful?'filter-selected':'filter-not-selected']" mat-raised-button
+            (click)="isLandingSuccessful = true; updateValue()" class="btn-size">True</button>
+        <button
+            [ngClass]="[isLandingSuccessful?'filter-not-selected': isLandingSuccessful === undefined ? 'filter-not-selected':'filter-selected']"
+            (click)="isLandingSuccessful = false; updateValue()" mat-raised-button class="btn-size">False</button>
+    </div>
+    <br>
+    <br>
+</div>

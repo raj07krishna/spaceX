@@ -1,0 +1,13 @@
+<div class="p-4 screen-style">
+    <mat-label class="font-extrabold text-2xl">SpaceX Launch Programs</mat-label>
+    <div class="mb-4"></div>
+    <div class="flex flex-wrap justify-center">
+        <div class="sm:w-full md:w-4/12 lg:w-2/12">
+            <app-filter-options [selectedFilter]="selectedFilter" [isLaunchSuccessful]="isLaunchSuccessful"
+                [isLandingSuccessful]="isLandingSuccessful" (data)="updateParams($event)"></app-filter-options>
+        </div>
+        <div class=" md:w-8/12 lg:w-10/12">
+            <app-launch-programs [spaceXData]="spaceXData"></app-launch-programs>
+        </div>
+    </div>
+</div>

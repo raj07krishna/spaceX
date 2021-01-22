@@ -3,6 +3,13 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 This project is using Angular Material and Tailwind CSS framework with Angular Universal to use server side rendering. [Demo](http://raj-spacex.herokuapp.com/)
 
+Key Features:
+  1. The initial launch programs landing page is server side rendered.
+  2. Applied filters changes the URL and update the Page with latest records without refreshing the page.
+  3. If the page is refreshed with the applied filters in the URL – the resulting page is server side rendered & subsequent filters are again client side rendered.
+  4. Responsive Behavior. Breakpoints - Mobile: <700px, Tablet:700px - 1024px, Desktop:1024px - 1440px
+  5. Beyond 1440px viewport,  the content is centered align with a max width of 1440.
+
 Using Angular Material helps in keeping styling consistent for entire application. 
 The Tailwind CSS framework uses a default mobile-first approach. Tailwind is Highly Customizable. One can use override default configurations with a tailwind.config.js file. Tailwind also performs PurgeCSS, which in turns help in reducing the file size considerably by scanning the HTML and removing unused classes.
 Using server side rendering you can take following advantages:

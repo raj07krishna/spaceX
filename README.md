@@ -1,7 +1,8 @@
 # SpaceX
-[Demo](http://raj-spacex.herokuapp.com/)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
-This project is using Angular Material and Tailwind CSS framework with Angular Universal to use server side rendering.
+This project is using Angular Material and Tailwind CSS framework with Angular Universal to use server side rendering. [Demo](http://raj-spacex.herokuapp.com/)
+
 Using Angular Material helps in keeping styling consistent for entire application. 
 The Tailwind CSS framework uses a default mobile-first approach. Tailwind is Highly Customizable. One can use override default configurations with a tailwind.config.js file. Tailwind also performs PurgeCSS, which in turns help in reducing the file size considerably by scanning the HTML and removing unused classes.
 Using server side rendering you can take following advantages:
